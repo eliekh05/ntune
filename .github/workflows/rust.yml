@@ -52,13 +52,13 @@ jobs:
 
       - name: Verify Build Output (Linux)
         run: |
-          if [ ! -f target/x86_64-unknown-linux-gnu/release/ntune ]; then
-            echo "Build output not found: target/x86_64-unknown-linux-gnu/release/ntune"
+          if [ ! -f target/x86_64-unknown-linux-gnu/release/Ntune ]; then
+            echo "Build output not found: target/x86_64-unknown-linux-gnu/release/Ntune"
             exit 1
           fi
 
       - name: Package for Release (Linux)
-        run: zip -r ntune_linux.zip target/x86_64-unknown-linux-gnu/release/ntune
+        run: zip -r ntune_linux.zip target/x86_64-unknown-linux-gnu/release/Ntune
 
       - name: Upload Artifact (Linux)
         uses: actions/upload-artifact@v3
